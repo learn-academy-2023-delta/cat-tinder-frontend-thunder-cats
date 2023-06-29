@@ -3,47 +3,39 @@ import { BrowserRouter } from 'react-router-dom'
 import CatIndex from './CatIndex'
 import mockCats from '../mockCats'
 
+
+const renderShow = () => {
+    render(
+        <BrowserRouter>
+            <CatIndex cats={mockCats}/>
+        </BrowserRouter>
+    )
+
+}
 describe("<CatIndex />", () => {
     it("renders a header", () => {
-        render(
-            <BrowserRouter>
-                <CatIndex />
-            </BrowserRouter>
-        )
-        screen.logTestingPlaygroundURL()
+        renderShow()
         const header = screen.getByRole('heading', {
             name: /list of all thunder cats/i
           })
         expect(header).toBeInTheDocument()
     })
     it("has shows the list of all thunder cats name", () => {
-        render(
-            <BrowserRouter>
-                <CatIndex cats={mockCats}/>
-            </BrowserRouter>
-        )
+        renderShow()
         mockCats.forEach(cat => {
             const thunderCatName = screen.getByText(cat.name)
             expect(thunderCatName).toBeInTheDocument()
         })   
     })
     it("has shows the list of all thunder cats age", () => {
-        render(
-            <BrowserRouter>
-                <CatIndex cats={mockCats}/>
-            </BrowserRouter>
-        )
+        renderShow()
         mockCats.forEach(cat => {
             const thunderCatAge = screen.getByText(cat.age)
             expect(thunderCatAge).toBeInTheDocument()
         })   
     })
     it("has shows the list of all thunder cats image", () => {
-        render(
-            <BrowserRouter>
-                <CatIndex cats={mockCats}/>
-            </BrowserRouter>
-        )
+        renderShow()
             const thunderCatImage = screen.getByRole('img', {
                 name: /panthro/i,
                 name: /cheetara/i,
