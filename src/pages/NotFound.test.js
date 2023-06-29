@@ -9,7 +9,6 @@ describe("<NotFound />", () => {
                 <NotFound />
             </BrowserRouter>
         )
-        screen.logTestingPlaygroundURL()
         const footer = screen.getByRole('heading', {
             name: /cat's playing peek\-a\-boo/i
           })
