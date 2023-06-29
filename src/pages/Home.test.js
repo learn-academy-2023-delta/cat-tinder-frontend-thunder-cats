@@ -10,8 +10,9 @@ describe("<Home />", () => {
             </BrowserRouter>
         )
         screen.logTestingPlaygroundURL()
-        const text = screen.getByRole('heading', {
-  name: /this is a app for all thundercats\./i
-})
+        const header = screen.getByRole('heading', {
+            name: /this is a app for all thundercats\./i
+            })
+        expect(header).toBeInTheDocument()
     })
 })
