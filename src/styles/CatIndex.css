@@ -1,0 +1,12 @@
+.grid-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 80px;
+    padding: 4rem;
+    background-color: brown;
+}
+
+h1{
+    text-align: center;
+}

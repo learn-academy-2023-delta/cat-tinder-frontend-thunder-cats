@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom'
-import CatIndex from './CatIndex'
+import CatIndex from '../pages/CatIndex'
 import mockCats from '../mockCats'
 
 
@@ -17,7 +17,7 @@ describe("<CatIndex />", () => {
         renderShow()
         const header = screen.getByRole('heading', {
             name: /list of all thunder cats/i
-          })
+        })
         expect(header).toBeInTheDocument()
     })
     it("has shows the list of all thunder cats name", () => {
