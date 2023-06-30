@@ -11,10 +11,8 @@ const Header = () => {
 
             <div className="rightSide">
                 <Link to="/"> Home </Link>
-                <Link to="/catindex"> CatIndex </Link>
-                <Link to="/catshow"> CatShow </Link>
-                <Link to="/catnew"> CatNew </Link>
-                <Link to="/catedit"> CatEdit </Link>
+                <Link to="/catindex"> List of Thunder Cats </Link>
+                <Link to="/catnew"> Make a New Thunder Cat </Link>
             </div>
         </div>
     )
