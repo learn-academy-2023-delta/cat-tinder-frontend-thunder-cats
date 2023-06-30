@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom'
-import CatNew from './CatNew';
+import CatNew from '../pages/CatNew';
 
 const renderShow = () => {
     render(

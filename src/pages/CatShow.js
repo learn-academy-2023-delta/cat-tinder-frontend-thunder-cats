@@ -1,13 +1,11 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-import {Card, CardBody, CardSubtitle, CardText, CardTitle} from 'reactstrap'
-
-
+import { useParams, NavLink } from 'react-router-dom'
+import {Card, CardBody, CardSubtitle, CardText, CardTitle, Button} from 'reactstrap'
 
 const CatShow = ({cats}) => {
- const { id } = useParams()
- let selectedThunderCat = cats?.find(cat => cat.id === +id)
- 
+  const { id } = useParams()
+  let selectedThunderCat = cats?.find(cat => cat.id === +id)
+
   return (
 
     <div>
@@ -37,7 +35,13 @@ const CatShow = ({cats}) => {
         </CardBody>
       </Card>
       )}
+      <Button>
+        <NavLink to={`/catedit/${selectedThunderCat.id}`} >
+        Edit Thunder Cat Profile </NavLink>
+      </Button>
+      
     </div>
+  
   )
 }
 
