@@ -15,14 +15,12 @@ const CatNew = ({createCat}) => {
 
   const handleChange = (e) => {
     setNewCat({ ...newCat, [e.target.name]: e.target.value})
-    // console.log(newCat)
   } 
 
   const handleSubmit = () => {
     createCat(newCat)
     navigate("/catindex")
   }
-
 
   return (
     <>
