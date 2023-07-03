@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {Card, CardBody, CardSubtitle, CardTitle, Button} from 'reactstrap'
 import {NavLink} from 'react-router-dom'
 import '../styles/CatIndex.css'
+import mockCats from '../mockCats'
 
 const CatIndex = ({cats}) => {
   return (
@@ -33,3 +34,4 @@ const CatIndex = ({cats}) => {
 }
 
 export default CatIndex
+
