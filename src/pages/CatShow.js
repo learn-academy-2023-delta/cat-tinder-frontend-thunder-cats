@@ -2,9 +2,11 @@ import React from 'react'
 import { useParams, NavLink } from 'react-router-dom'
 import {Card, CardBody, CardSubtitle, CardText, CardTitle, Button} from 'reactstrap'
 
-const CatShow = ({cats}) => {
+const CatShow = ({cats, deleteCat}) => {
   const { id } = useParams()
   let selectedThunderCat = cats?.find(cat => cat.id === +id)
+
+
 
   return (
 
@@ -38,6 +40,11 @@ const CatShow = ({cats}) => {
       <Button>
         <NavLink to={`/catedit/${selectedThunderCat.id}`} >
         Edit Thunder Cat Profile </NavLink>
+      </Button>
+
+      <Button onClick={() => deleteCat(id)}>
+        <NavLink to={'/catindex'}>
+        Delete Cat</NavLink>
       </Button>
       
     </div>
