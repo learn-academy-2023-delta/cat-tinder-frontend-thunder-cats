@@ -6,7 +6,6 @@ import '../styles/CatIndex.css'
 const CatIndex = ({cats}) => {
   return (
     <>
-    <h1>List of All Thunder Cats</h1>
     <div className='grid-container'>
     {cats?.map((cat, index) =>{
       return (

@@ -1,6 +1,7 @@
 import React, { useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap'
+import './CatNewStyle.css'
 
 const CatNew = ({createCat}) => {
 
@@ -24,6 +25,7 @@ const CatNew = ({createCat}) => {
 
   return (
     <>
+    <div className='center'>
       <h2>Enter a new Thunder Cat!!</h2>
       
       <Form>
@@ -51,6 +53,7 @@ const CatNew = ({createCat}) => {
           Submit
         </Button>
       </Form>
+      </div>
     </>
     
   )

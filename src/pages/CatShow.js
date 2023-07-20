@@ -14,7 +14,7 @@ const CatShow = ({cats, deleteCat}) => {
       {selectedThunderCat && (
         <Card
         style={{
-          width: '21rem'
+          width: '15rem'
         }}
       >
         <img

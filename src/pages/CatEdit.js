@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap'
+import './CatEditStyle.css'
 
 const CatEdit = ({ cats, updateCat}) => {
   const { id } = useParams()
@@ -27,6 +28,7 @@ const CatEdit = ({ cats, updateCat}) => {
 
   return (
     <>
+    <div className='center'>
       <Form>
         <FormGroup>
           <Label for="name">Name</Label>
@@ -52,6 +54,7 @@ const CatEdit = ({ cats, updateCat}) => {
           Submit Updated Thunder Cat
         </Button>
       </Form>
+      </div>
     </>
   )
 }
